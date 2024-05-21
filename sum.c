@@ -1,17 +1,18 @@
 #include<stdio.h>
-int main(){
-    float p,q,r,sum ;
+int add(int a, int b){
+    return a+b;
+}
 
-    printf("Enter the value of p:");
-    scanf("%f",&p);
+int main (){
+    int n; 
+    printf("Enter the number:\n");
+    scanf("%d",&n);
 
-    printf("Enter the value of q:");
-    scanf("%f",&q);
+    int m; 
+    printf("Enter the number:\n");
+    scanf("%d",&m);
 
-    printf("Enter the value of r:");
-    scanf("%f",&r);
-
-    sum=p+q+r;
-    printf("The sum of numbers is : %f",sum);
+    int sum=add(n,m);
+    printf("%d",sum);
     return 0;
 }

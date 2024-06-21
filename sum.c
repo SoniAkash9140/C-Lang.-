@@ -1,18 +1,16 @@
 #include<stdio.h>
-int add(int a, int b){
-    return a+b;
+void sum(int n,int s){
+    if(n==0){
+        printf("%d",s);
+        return;
+    }
+    sum(n-1,s+n);
+    return;
 }
-
-int main (){
-    int n; 
-    printf("Enter the number:\n");
+int main(){
+    int n;
+    printf("Enter the no.");
     scanf("%d",&n);
-
-    int m; 
-    printf("Enter the number:\n");
-    scanf("%d",&m);
-
-    int sum=add(n,m);
-    printf("%d",sum);
+    sum(n,0);
     return 0;
 }

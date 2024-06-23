@@ -1,19 +1,14 @@
 #include<stdio.h>
-int main(){
-     int n; 
-    printf("Enter the number n:\n");
-    scanf("%d",&n);
-
-    int m; 
-    printf("Enter the number m:\n");
-    scanf("%d",&m);
-
-    n=n+m;
-    m=n-m;
-    n=n-m;
-
-    printf("%d is the swap value of n:\n",n);
-    printf("%d is the swap value of m:\n",m);
-
-    return 0;
+void fun(int x[]){
+    int temp=x[0];
+    x[0]=x[1];
+    x[1]=temp;
+    return;
 }
+int main(){
+    int arr[2]={2,9};
+    printf("%d %d\n",arr[0],arr[1]);
+    fun(arr);
+    printf("%d %d\n",arr[0],arr[1]);
+    return 0;
+} 
